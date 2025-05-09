@@ -32,7 +32,7 @@ export default function XDictionary() {
         type="text"
         value={searchWord}
         onChange={(e) => setSearchWord(e.target.value)}
-        placeholder="Enter a word"
+        placeholder="Search for a word..."
       />
       <button onClick={handleSearch}>Search</button>
       <div>
