@@ -36,11 +36,9 @@ export default function XDictionary() {
       />
       <button onClick={handleSearch}>Search</button>
       <div>
+        <h3>Definition:{" "}</h3> 
         {definition && 
-          <div>
-            <h3>Definition:{" "}</h3> 
-            <p>{definition}</p>
-          </div>
+          <p>{definition}</p>
         }
       </div>
     </div>
