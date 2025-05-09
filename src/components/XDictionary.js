@@ -12,16 +12,16 @@ export default function XDictionary() {
 
   // State for user input and the result
   const [searchWord, setSearchWord] = useState('');
-  const [result, setResult] = useState(null);
+  const [definition, setDefinition] = useState(null);
 
   // Search function
   const handleSearch = () => {
     const foundWord = dictionary.find(entry => entry.word.toLowerCase() === searchWord.toLowerCase());
     
     if (foundWord) {
-      setResult(foundWord.meaning);  // Show the meaning if word found
+      setDefinition(foundWord.meaning);  // Show the meaning if word found
     } else {
-      setResult("Word not found in the dictionary.");  // Show not found message
+      setDefinition("Word not found in the dictionary.");  // Show not found message
     }
   };
 
@@ -36,10 +36,10 @@ export default function XDictionary() {
       />
       <button onClick={handleSearch}>Search</button>
       <div>
-        {result && 
+        {definition && 
           <div>
             <h3>Definition:{" "}</h3> 
-            <p>{result}</p>
+            <p>{definition}</p>
           </div>
         }
       </div>
