@@ -38,7 +38,7 @@ export default function XDictionary() {
       <div>
         {result && 
           <div>
-            <h3>Definition:</h3> 
+            <h3>Definition:{" "}</h3> 
             <p>{result}</p>
           </div>
         }
